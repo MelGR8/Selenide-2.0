@@ -26,12 +26,12 @@ class CardDeliveryOrder {
         String planningDate = generateDate(4, "dd.MM.yyyy");
 
         SelenideElement form = $(".form_theme_alfa-on-white");
-        form.$("[placeholder='Город']").setValue("Воронеж");
+        form.$("[placeholder='Город']").setValue("Саратов");
         $("[data-test-id=date] input").doubleClick();
         $("[data-test-id=date] input").sendKeys(Keys.BACK_SPACE);
         form.$("[placeholder='Дата встречи']").setValue(planningDate);
-        form.$("[data-test-id=name] [name=name]").setValue("Пиотр Покрышкин-Кожедуб");
-        form.$("[data-test-id=phone] [type=tel]").setValue("+79123456789");
+        form.$("[data-test-id=name] [name=name]").setValue("Евгений Поддубный");
+        form.$("[data-test-id=phone] [type=tel]").setValue("+79185643756");
         form.$("[data-test-id=agreement] .checkbox__box").click();
         form.$(".button__content").click();
         $(".notification__content")
